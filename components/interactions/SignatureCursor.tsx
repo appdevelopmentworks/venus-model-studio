@@ -14,16 +14,23 @@ export function SignatureCursor() {
   const ringRef = useRef<HTMLDivElement>(null);
   const labelRef = useRef<HTMLDivElement>(null);
 
+  // 1) 入力デバイス判定のみ(この時点ではカーソル要素は未レンダー)
   useEffect(() => {
     const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     if (!fine || prefersReducedMotion()) return;
     // クライアント専用の入力デバイス判定に基づく意図的なsetState
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setEnabled(true);
+  }, []);
 
-    const dot = dotRef.current!;
-    const ring = ringRef.current!;
-    const label = labelRef.current!;
+  // 2) enabled=true の再レンダー後に要素が存在してから配線する
+  //    (以前は同一エフェクト内でref参照しnullクラッシュしていた)
+  useEffect(() => {
+    if (!enabled) return;
+    const dot = dotRef.current;
+    const ring = ringRef.current;
+    const label = labelRef.current;
+    if (!dot || !ring || !label) return;
 
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
@@ -86,7 +93,7 @@ export function SignatureCursor() {
       document.removeEventListener('pointerenter', onEnter);
       document.documentElement.classList.remove('has-signature-cursor');
     };
-  }, []);
+  }, [enabled]);
 
   if (!enabled) return null;
 

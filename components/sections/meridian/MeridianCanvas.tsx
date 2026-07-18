@@ -2,9 +2,9 @@
 
 import { useMemo, type MutableRefObject } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 import { threeConfig } from '@/config/three';
+import { useLazyTexture } from '@/lib/use-lazy-texture';
 
 const vertexShader = /* glsl */ `
   varying vec2 vUv;
@@ -108,13 +108,12 @@ function MeridianPlane({
   progressRef: MutableRefObject<number>;
 }) {
   const { viewport } = useThree();
-  const [texReal, texDigital] = useTexture([realUrl, digitalUrl]);
+  // Suspense非依存のローダー(dreiのuseTextureはSuspense未解決で白画面を起こしたため不使用)
+  const texReal = useLazyTexture(realUrl);
+  const texDigital = useLazyTexture(digitalUrl);
 
   const material = useMemo(() => {
-    for (const t of [texReal, texDigital]) {
-      t.colorSpace = THREE.SRGBColorSpace;
-      t.wrapS = t.wrapT = THREE.ClampToEdgeWrapping;
-    }
+    if (!texReal || !texDigital) return null;
     const cfg = threeConfig.meridian;
     return new THREE.ShaderMaterial({
       vertexShader,
@@ -136,11 +135,15 @@ function MeridianPlane({
   }, [texReal, texDigital]);
 
   useFrame((state, delta) => {
+    if (!material) return;
     material.uniforms.uTime.value = state.clock.elapsedTime;
     material.uniforms.uPlaneAspect.value = viewport.width / viewport.height;
     const u = material.uniforms.uProgress;
     u.value += (progressRef.current - u.value) * Math.min(1, delta * 6);
   });
+
+  // 両テクスチャが揃うまで描画しない(CanvasはクリアされたままDOM側の暗幕が見える)
+  if (!material) return null;
 
   return (
     <mesh scale={[viewport.width, viewport.height, 1]} material={material}>

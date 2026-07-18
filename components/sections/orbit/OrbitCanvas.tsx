@@ -2,9 +2,9 @@
 
 import { useEffect, useMemo, useRef, type MutableRefObject } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 import { threeConfig } from '@/config/three';
+import { useLazyTexture } from '@/lib/use-lazy-texture';
 import type { QualityTier } from '@/lib/performance';
 
 export type OrbitModelItem = {
@@ -83,18 +83,34 @@ function Panel({
   const cfg = threeConfig.orbit;
   const mesh = useRef<THREE.Mesh>(null);
   const glowRef = useRef<THREE.Mesh>(null);
-  const poster = useTexture(item.posterUrl);
+  // Suspense非依存のローダー(未ロード中はnull → パネルはopacity 0で待機)
+  const poster = useLazyTexture(item.posterUrl);
   const videoRef = useRef<{ el: HTMLVideoElement; tex: THREE.VideoTexture } | null>(null);
   const panelAspect = cfg.panelWidth / cfg.panelHeight;
 
-  const material = useMemo(() => {
-    poster.colorSpace = THREE.SRGBColorSpace;
+  // マテリアルは1度だけ生成し、テクスチャ到着時にmapを差し込む
+  const material = useMemo(
+    () =>
+      new THREE.MeshBasicMaterial({
+        toneMapped: false,
+        transparent: true,
+        opacity: 0
+      }),
+    []
+  );
+
+  useEffect(() => {
+    if (!poster) return;
     const img = poster.image as { width?: number; height?: number } | undefined;
     const texAspect =
       img?.width && img?.height ? img.width / img.height : panelAspect;
     applyCover(poster, panelAspect, texAspect, item.focalX);
-    return new THREE.MeshBasicMaterial({ map: poster, toneMapped: false });
-  }, [poster, panelAspect, item.focalX]);
+    // アクティブパネルがVideoTextureを保持中なら上書きしない
+    if (!videoRef.current) {
+      material.map = poster;
+      material.needsUpdate = true;
+    }
+  }, [poster, panelAspect, item.focalX, material]);
 
   // T3のみ: アクティブ時にVideoTextureへ切替(常に同時1本)
   useEffect(() => {
@@ -155,12 +171,15 @@ function Panel({
     };
   }, [tier, item.videoUrl, item.focalX, index, material, poster, panelAspect, activeIndexRef]);
 
-  useFrame(() => {
+  useFrame((_, delta) => {
     if (!mesh.current) return;
     const strength = activeStrengthRef.current[index] ?? 0;
     // アクティブ: 明るく・わずかに拡大・前へ / 非アクティブ: 沈める
     const brightness = 0.45 + strength * 0.55;
     material.color.setScalar(brightness);
+    // テクスチャ到着までopacity 0で待機し、到着後フェードイン
+    const targetOpacity = material.map ? 1 : 0;
+    material.opacity += (targetOpacity - material.opacity) * Math.min(1, delta * 4);
     const scale = 1 + strength * 0.06;
     mesh.current.scale.setScalar(scale);
     if (glowRef.current) {
