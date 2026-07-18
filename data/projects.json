@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "projects": [
+    {
+      "slug": "digital-twin-study",
+      "status": "concept",
+      "published": true,
+      "isPlaceholder": false,
+      "title": {
+        "ja": "デジタルツイン・スタディ",
+        "en": "Digital Twin Study",
+        "ru": "Исследование цифрового двойника",
+        "zh-CN": "数字分身研究",
+        "ko": "디지털 트윈 스터디"
+      },
+      "summary": {
+        "ja": "実在モデルの表現領域を、同意の範囲でデジタルに拡張する自主研究。",
+        "en": "A self-initiated study extending a real model's range into digital, within consent.",
+        "ru": "Собственное исследование по расширению образа реальной модели в цифру в рамках согласия.",
+        "zh-CN": "在授权范围内，将真实模特的表现力延伸至数字领域的自主研究。",
+        "ko": "동의 범위 내에서 실제 모델의 표현 영역을 디지털로 확장하는 자체 연구."
+      },
+      "category": ["hybrid", "digital-twin"],
+      "cover": "image/posters/hybrid-digital-twin-01.webp",
+      "video": "video/hybrid/hybrid-digital-twin-01.mp4",
+      "gallery": ["image/posters/hybrid-digital-twin-01.webp"],
+      "relatedModels": [],
+      "challenge": {
+        "ja": "同一人物の同一性を保ちながら、表現の幅だけを広げられるか。",
+        "en": "Can we widen expression while keeping the person's identity intact?"
+      },
+      "approach": {
+        "ja": "実写を基準に、衣装と空間だけをデジタルで再構成した。",
+        "en": "Using the live shoot as the anchor, only wardrobe and space were digitally recomposed."
+      },
+      "humanContribution": {
+        "ja": "撮影ディレクション、被写体の表情演出、最終判断。",
+        "en": "Shoot direction, expression coaching, and final judgement."
+      },
+      "aiContribution": {
+        "ja": "衣装・背景のバリエーション生成と補間。",
+        "en": "Generation and interpolation of wardrobe and background variations."
+      }
+    },
+    {
+      "slug": "world-transform-study",
+      "status": "concept",
+      "published": true,
+      "isPlaceholder": false,
+      "title": {
+        "ja": "ワールド・トランスフォーム",
+        "en": "World Transform",
+        "ru": "Трансформация мира",
+        "zh-CN": "世界变换",
+        "ko": "월드 트랜스폼"
+      },
+      "summary": {
+        "ja": "顔の同一性を保ったまま、衣装と世界観を一続きで変化させる映像実験。",
+        "en": "A film experiment morphing wardrobe and world in one take while identity holds.",
+        "ru": "Кинематографический эксперимент: смена одежды и мира в одном кадре при сохранении личности.",
+        "zh-CN": "在保持面部同一性的同时，让服装与世界观连续变化的影像实验。",
+        "ko": "얼굴 정체성을 유지한 채 의상과 세계관을 하나의 흐름으로 변화시키는 영상 실험."
+      },
+      "category": ["hybrid", "film"],
+      "cover": "image/posters/hybrid-world-transform-01.webp",
+      "video": "video/hybrid/hybrid-world-transform-01.mp4",
+      "gallery": ["image/posters/hybrid-world-transform-01.webp"],
+      "relatedModels": [],
+      "challenge": {
+        "ja": "衣装と背景を大きく変えても、人物が別人に見えないこと。",
+        "en": "Change wardrobe and world dramatically without the person becoming someone else."
+      },
+      "approach": {
+        "ja": "開始・終了フレームを固定し、その間をシームレスに補間した。",
+        "en": "Fixed start and end frames, then interpolated the space between seamlessly."
+      },
+      "humanContribution": {
+        "ja": "コンセプト設計、フレーミング、品質判定。",
+        "en": "Concept design, framing, and quality control."
+      },
+      "aiContribution": {
+        "ja": "フレーム間の遷移生成と衣装変化。",
+        "en": "Frame-to-frame transition and wardrobe morphing."
+      }
+    },
+    {
+      "slug": "studio-flash-session",
+      "status": "concept",
+      "published": true,
+      "isPlaceholder": false,
+      "title": {
+        "ja": "スタジオ・フラッシュ・セッション",
+        "en": "Studio Flash Session",
+        "ru": "Студийная вспышка",
+        "zh-CN": "影棚闪光拍摄",
+        "ko": "스튜디오 플래시 세션"
+      },
+      "summary": {
+        "ja": "実在モデル撮影の質感を検証した、スタジオ・ストロボの記録。",
+        "en": "A studio strobe record verifying the texture of real-model photography.",
+        "ru": "Студийная запись со стробом, проверяющая фактуру съёмки реальной модели.",
+        "zh-CN": "验证真实模特拍摄质感的影棚闪光记录。",
+        "ko": "실제 모델 촬영의 질감을 검증한 스튜디오 스트로브 기록."
+      },
+      "category": ["real", "photography"],
+      "cover": "image/posters/real-studio-flash-01.webp",
+      "video": "video/real-models/real-studio-flash-01.mp4",
+      "gallery": ["image/posters/real-studio-flash-01.webp"],
+      "relatedModels": [],
+      "challenge": {
+        "ja": "生成では得にくい、現場の光と偶然性を捉えること。",
+        "en": "Capture the on-set light and chance that generation struggles to reproduce."
+      },
+      "approach": {
+        "ja": "ストロボと被写体の呼吸だけで、一瞬を切り取った。",
+        "en": "Caught the instant using only the strobe and the subject's breathing."
+      },
+      "humanContribution": {
+        "ja": "ライティング、撮影、セレクト。",
+        "en": "Lighting, photography, and selection."
+      },
+      "aiContribution": {
+        "ja": "この工程では未使用。実写のみ。",
+        "en": "Not used in this piece — live photography only."
+      }
+    }
+  ]
+}

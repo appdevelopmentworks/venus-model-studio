@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "title": "Venus Model Studio — AI 与真人模特的混合工作室",
+    "description": "真实才华，数字可能。一个 AI 模特与真人模特共同创作的全新制作工作室。"
+  },
+  "nav": {
+    "home": "首页",
+    "models": "模特",
+    "services": "服务",
+    "projects": "项目",
+    "forTalents": "致模特与艺人",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "menu": "菜单",
+    "close": "关闭"
+  },
+  "common": {
+    "aiModel": "AI MODEL",
+    "realModel": "REAL MODEL",
+    "aiEnhanced": "AI-ENHANCED REAL TALENT",
+    "conceptProject": "CONCEPT PROJECT",
+    "clientWork": "CLIENT WORK",
+    "viewProfile": "查看档案",
+    "viewProject": "查看项目",
+    "viewAll": "查看全部",
+    "comingSoon": "敬请期待",
+    "scrollDown": "向下滚动",
+    "backTo": "返回列表"
+  },
+  "preloader": {
+    "loading": "LOADING",
+    "studio": "VENUS MODEL STUDIO"
+  },
+  "hero": {
+    "taglinePrimary": "REAL TALENT. DIGITAL POSSIBILITY.",
+    "taglineSecondary": "AI Models × Real Models × Cinematic Production",
+    "viewModels": "查看模特",
+    "startProject": "启动项目",
+    "videoAlt": "在高端工作室中并肩而立、象征真实才华与数字可能的两位模特"
+  },
+  "manifesto": {
+    "kicker": "01 — MANIFESTO",
+    "l1": "REAL TALENT.",
+    "l2": "DIGITAL POSSIBILITY.",
+    "l3": "我们将真人模特的存在感",
+    "l4": "与 AI 的创作自由，汇聚于同一间工作室。",
+    "band": ["REAL", "HYBRID", "AI"]
+  },
+  "aiModels": {
+    "kicker": "02 — AI MODELS",
+    "title": "虚构，却极具说服力。",
+    "body": "完全原创的 AI 模特——绝不模仿真实人物。为您的品牌量身设计的面孔与气场。",
+    "drag": "拖动以旋转"
+  },
+  "realTalent": {
+    "kicker": "03 — REAL TALENT",
+    "title": "现场的热度，无法被生成。",
+    "body": "闪光灯的瞬间、紧绷的空气、偶然的完美一刻。真人拍摄，正是我们的原点。"
+  },
+  "meridian": {
+    "kicker": "04 — HYBRID",
+    "title": "亲手移动这条界线。",
+    "real": "REAL",
+    "digital": "DIGITAL",
+    "drag": "拖动",
+    "body": "同一个人——从真实拍摄走向数字表达。AI 是拓展，而非替代。",
+    "cta": "了解混合制作"
+  },
+  "services": {
+    "kicker": "05 — SERVICES",
+    "title": "我们能做什么"
+  },
+  "contact": {
+    "kicker": "06 — CONTACT",
+    "title": "有想要拍摄的影像吗？",
+    "corporate": "品牌与制作方",
+    "talent": "模特与艺人",
+    "cta": "联系我们"
+  },
+  "ending": {
+    "tagline": "REAL TALENT. DIGITAL POSSIBILITY."
+  },
+  "footer": {
+    "note": "AI 模特与真人模特，在每一个页面都清晰区分标示。",
+    "rights": "© {year} Venus Model Studio",
+    "privacy": "隐私政策",
+    "terms": "使用条款"
+  },
+  "servicesPage": {
+    "kicker": "SERVICES",
+    "title": "我们能做什么",
+    "intro": "从 AI 模特制作到真人模特拍摄，再到将两者融合的混合制作。我们围绕品牌目标，设计人与 AI 的分工。",
+    "detailLabel": "详情",
+    "cta": "就此咨询"
+  },
+  "projectsPage": {
+    "kicker": "PROJECTS",
+    "title": "精选作品",
+    "intro": "当前公开的是自主创作的概念项目。我们绝不会以虚构的客户名称、获奖或媒体报道冒充真实业绩。",
+    "challenge": "课题",
+    "approach": "方法",
+    "human": "人的贡献",
+    "ai": "AI 的应用之处",
+    "empty": "项目正在准备公开中。"
+  },
+  "forTalentsPage": {
+    "kicker": "FOR MODELS & TALENTS",
+    "title": "致模特与艺人",
+    "intro": "我们欢迎真人模特、演员、有志成为艺人者以及海外模特的加入。在 AI 时代如何处理您的肖像，我们与您一同思考。",
+    "benefitsTitle": "加入的价值",
+    "benefits": [
+      "从棚拍到影像与 AI 表达，一以贯之的作品创作",
+      "仅在明确约定的肖像使用范围内开展工作",
+      "连接国内外项目的品牌塑造机会"
+    ],
+    "rightsTitle": "关于肖像的使用",
+    "rights": "若将您的肖像用于 AI 表达，我们必定事先约定使用范围。绝不进行未经同意的使用或以替代为目的的使用，仅在已获批准的范围内公开。",
+    "flowTitle": "从拍摄到 AI 表达的流程",
+    "flow": [
+      "咨询与世界观沟通",
+      "在影棚或外景拍摄",
+      "在同意范围内的 AI 表达与拓展",
+      "公开范围的最终确认"
+    ],
+    "cta": "咨询加入事宜"
+  },
+  "aboutPage": {
+    "kicker": "ABOUT",
+    "title": "汇聚真实才华，与数字的可能。",
+    "lead": "Venus Model Studio 既不是匿名的 AI 生成公司，也不是传统模特事务所的名录网站。我们是一间整合真实才华、拍摄经验、AI 表达与影像制作的工作室。",
+    "positionTitle": "我们的立场",
+    "position": "我们同时经营 AI 模特与真人模特，并始终清晰区分二者。我们认为 AI 并非替代人类，而是拓展表达可能的工具。",
+    "principleTitle": "我们的承诺",
+    "principles": [
+      "在视觉与文字上清晰区分 AI 模特、真人模特与 AI 增强的真人才华",
+      "绝不捏造客户名称、获奖或媒体报道",
+      "真人肖像仅在本人同意的范围内使用"
+    ]
+  },
+  "contactPage": {
+    "kicker": "CONTACT",
+    "title": "联系我们",
+    "intro": "无论您是品牌或制作方，还是模特或艺人，都可以在此与我们取得联系。",
+    "typeLabel": "咨询类型",
+    "typeCorporate": "品牌／制作咨询",
+    "typeTalent": "模特／艺人咨询",
+    "typeOther": "其他",
+    "nameLabel": "姓名",
+    "orgLabel": "组织名称（选填）",
+    "emailLabel": "电子邮箱",
+    "messageLabel": "内容",
+    "consentLabel": "我同意隐私政策",
+    "submit": "发送",
+    "sending": "发送中…",
+    "mailtoNote": "点击发送后，将打开您的邮件应用程序。",
+    "successTitle": "感谢您",
+    "success": "我们已收到您的咨询，将尽快与您联系。",
+    "errorTitle": "无法发送",
+    "error": "请稍后重试，或直接通过电子邮件与我们联系。",
+    "errors": {
+      "name": "请输入姓名",
+      "email": "请输入有效的电子邮箱",
+      "message": "请输入内容（10 个字符以上）",
+      "consent": "需要同意隐私政策"
+    }
+  },
+  "legal": {
+    "privacyTitle": "隐私政策",
+    "termsTitle": "使用条款",
+    "lastUpdated": "最后更新",
+    "privacyBody": "通过本网站咨询表单获取的个人信息，仅用于回应您的咨询，未经本人同意绝不提供给第三方。若您希望删除已获取的信息，请与我们联系。使用访问分析时，将在不识别个人的范围内进行统计利用。",
+    "termsBody": "本网站刊载的图像、视频与文字的著作权归 Venus Model Studio 或正当权利人所有。所有 AI 模特均为虚构存在，不代表真实人物。真人模特的肖像仅在本人同意的范围内刊载。刊载内容可能在不另行通知的情况下变更。"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "services": [
+    {
+      "id": "ai-model-production",
+      "order": 1,
+      "title": { "ja": "AIモデル制作", "en": "AI Model Production" },
+      "short": {
+        "ja": "ブランド専用の架空モデルを設計し、静止画・動画で運用します。",
+        "en": "Original fictional models designed for your brand, delivered as stills and film."
+      },
+      "detail": {
+        "ja": "実在の人物には似せない、完全にオリジナルの顔と存在感をゼロから設計します。キャンペーンの世界観に合わせて表情・スタイリング・雰囲気を調整し、静止画から短尺動画まで一貫したモデルとして運用できます。",
+        "en": "We design entirely original faces and presence from scratch — never modeled on real people. Expression, styling and mood are tuned to your campaign, and the same model runs consistently from stills to short film."
+      }
+    },
+    {
+      "id": "real-model-photography",
+      "order": 2,
+      "title": { "ja": "実在モデル撮影", "en": "Real Model Photography" },
+      "short": {
+        "ja": "スタジオ・ロケーションでのプロフェッショナルな撮影とディレクション。",
+        "en": "Professional studio and location shoots with full direction."
+      },
+      "detail": {
+        "ja": "キャスティングからライティング、ディレクションまで、現場の質感を大切にした撮影を行います。生成では得にくい光と偶然性を捉え、ブランドに必要な本物の一瞬を残します。",
+        "en": "From casting to lighting and direction, we shoot with respect for on-set texture — capturing the light and chance that generation struggles to reproduce."
+      }
+    },
+    {
+      "id": "hybrid-campaign",
+      "order": 3,
+      "title": { "ja": "ハイブリッドキャンペーン制作", "en": "Hybrid Campaign Production" },
+      "short": {
+        "ja": "実写とAI表現を組み合わせた、これまでにないキャンペーン映像。",
+        "en": "Campaigns that blend real photography with AI expression."
+      },
+      "detail": {
+        "ja": "実写の説得力とAIの拡張性を、ひとつのキャンペーンに統合します。人が担う部分とAIが担う部分を明確にしながら、予算とスケジュールに合わせた最適な配分を設計します。",
+        "en": "We integrate the credibility of live shooting with the reach of AI into a single campaign, clearly dividing human and AI work and balancing them to your budget and timeline."
+      }
+    },
+    {
+      "id": "digital-twin",
+      "order": 4,
+      "title": { "ja": "デジタルツイン / AI拡張", "en": "Digital Twin / AI Enhancement" },
+      "short": {
+        "ja": "許諾に基づき、実在モデルの表現領域をデジタルで拡張します。",
+        "en": "With consent, we extend a real model's creative range digitally."
+      },
+      "detail": {
+        "ja": "本人の明確な同意と利用範囲の合意を前提に、実在モデルの表現領域をデジタルで広げます。置き換えではなく拡張として、肖像の扱いを丁寧に設計します。",
+        "en": "With explicit consent and agreed usage scope, we extend a real model's range digitally — as expansion, not replacement, handling likeness with care."
+      }
+    },
+    {
+      "id": "ai-film-social",
+      "order": 5,
+      "title": { "ja": "AIフィルム & SNSコンテンツ", "en": "AI Film & Social Content" },
+      "short": {
+        "ja": "縦型動画からブランドフィルムまで、スピードと品質を両立。",
+        "en": "From vertical clips to brand films — fast, without losing craft."
+      },
+      "detail": {
+        "ja": "SNSの縦型動画から、ブランドを語る長尺フィルムまで。生成とプロダクションを組み合わせ、必要なスピードを保ちながら品質を落とさない制作体制を用意します。",
+        "en": "From vertical social clips to longer brand films, we combine generation and production to keep the speed you need without sacrificing quality."
+      }
+    },
+    {
+      "id": "talent-branding",
+      "order": 6,
+      "title": { "ja": "タレントブランディング", "en": "Talent Branding" },
+      "short": {
+        "ja": "モデル・タレントの世界観設計と、AI時代の肖像戦略。",
+        "en": "Identity design for talents — and a portrait strategy for the AI era."
+      },
+      "detail": {
+        "ja": "モデル・タレント一人ひとりの世界観を設計し、AI時代における肖像の使い方までを一緒に考えます。長期的なキャリアとブランド価値を守る戦略を提案します。",
+        "en": "We design each talent's identity and think through how their likeness should be used in the AI era — proposing strategies that protect long-term career and brand value."
+      }
+    }
+  ]
+}

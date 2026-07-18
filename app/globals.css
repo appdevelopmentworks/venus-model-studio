@@ -1,0 +1,299 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #050505;
+  --color-elevated: #101010;
+  --color-panel: #16130e;
+  --color-ivory: #f4f0e8;
+  --color-gold: #d6b36a;
+  --color-rose: #c98e7b;
+  --color-gold-muted: #8d7449;
+  --color-gold-deep: #4a3b22;
+  --color-soft: #aaa6a0;
+
+  --font-display: var(--font-cormorant), var(--font-shippori), 'Yu Mincho', serif;
+  --font-body: var(--font-instrument), var(--font-noto-jp), system-ui, sans-serif;
+
+  --ease-venus-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-venus-inout: cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background: var(--color-bg);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ivory);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(214, 179, 106, 0.35);
+  color: var(--color-ivory);
+}
+
+/* ---------- brand utilities ---------- */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* 1px gold hairline: transparent → gold → transparent */
+.gold-hairline {
+  height: 1px;
+  border: 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(214, 179, 106, 0.6),
+    transparent
+  );
+}
+
+/* editorial section index e.g. "01 — MANIFESTO" */
+.section-kicker {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+}
+
+/* frosted glass panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* CSS film grain (used when canvas grain is unavailable) */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain-shift 0.9s steps(4) infinite;
+}
+
+@keyframes grain-shift {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-2%, 1%); }
+  50% { transform: translate(1%, -2%); }
+  75% { transform: translate(-1%, 2%); }
+  100% { transform: translate(0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain::after {
+    animation: none;
+  }
+}
+
+/* CSS halo ring (WebGL-free fallback + decorative) */
+.css-halo {
+  border-radius: 9999px;
+  border: 1px solid rgba(214, 179, 106, 0.4);
+  box-shadow:
+    0 0 40px rgba(214, 179, 106, 0.12),
+    inset 0 0 40px rgba(214, 179, 106, 0.08);
+}
+
+/* primary CTA with one-shot gold shimmer sweep */
+.btn-venus {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2.2rem;
+  border: 1px solid rgba(214, 179, 106, 0.55);
+  color: var(--color-ivory);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: border-color 0.3s var(--ease-venus-out), background 0.3s var(--ease-venus-out);
+  background: rgba(5, 5, 5, 0.35);
+}
+
+.btn-venus::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent,
+    rgba(214, 179, 106, 0.35),
+    transparent
+  );
+  transform: skewX(-18deg);
+  transition: none;
+}
+
+.btn-venus:hover {
+  border-color: var(--color-gold);
+  background: rgba(214, 179, 106, 0.08);
+}
+
+.btn-venus:hover::before {
+  transition: left 0.6s var(--ease-venus-out);
+  left: 120%;
+}
+
+.btn-venus:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* underline link: enters left→right, exits continuing right */
+.link-venus {
+  position: relative;
+}
+
+.link-venus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+  width: 100%;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.4s var(--ease-venus-out);
+}
+
+.link-venus:hover::after,
+.link-venus:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+/* line mask reveal container */
+.line-mask {
+  display: block;
+  overflow: hidden;
+}
+
+.line-mask > span {
+  display: block;
+  will-change: transform;
+}
+
+/* hide scrollbar for snap carousels while keeping scrollability */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- S8 Signature Cursor ---------- */
+
+/* ネイティブカーソルを隠すのは、カスタム描画が有効な環境のみ */
+.has-signature-cursor,
+.has-signature-cursor a,
+.has-signature-cursor button {
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 90;
+  will-change: transform;
+  margin-left: -3px;
+  margin-top: -3px;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: var(--color-gold);
+  transition: opacity 0.3s;
+}
+
+.cursor-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-left: -14px;
+  margin-top: -14px;
+  border: 1px solid rgba(214, 179, 106, 0.6);
+  border-radius: 9999px;
+  transition:
+    width 0.3s var(--ease-venus-out),
+    height 0.3s var(--ease-venus-out),
+    border-radius 0.3s var(--ease-venus-out),
+    background 0.3s,
+    opacity 0.3s;
+}
+
+.cursor-ring[data-state='link'] {
+  width: 44px;
+  height: 44px;
+  margin-left: -22px;
+  margin-top: -22px;
+  background: rgba(214, 179, 106, 0.08);
+}
+
+.cursor-ring[data-state='label'] {
+  width: 72px;
+  height: 72px;
+  margin-left: -36px;
+  margin-top: -36px;
+  background: rgba(5, 5, 5, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.cursor-ring[data-state='text'] {
+  width: 2px;
+  height: 26px;
+  margin-left: -1px;
+  margin-top: -13px;
+  border-radius: 1px;
+  background: var(--color-gold);
+  border-color: transparent;
+}
+
+.cursor-ring[data-pressed='true'] {
+  transform-origin: center;
+  scale: 0.85;
+}
+
+.cursor-label {
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .has-signature-cursor,
+  .has-signature-cursor a,
+  .has-signature-cursor button {
+    cursor: auto;
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "hero-hybrid-desktop",
+      "slot": "hero.desktop",
+      "type": "video",
+      "category": "hero",
+      "src": "video/hero/hero-hybrid-desktop.mp4",
+      "poster": "image/posters/hero-hybrid-desktop.webp",
+      "aspectRatio": "16:9",
+      "autoplay": true,
+      "loop": true,
+      "muted": true,
+      "required": true,
+      "rightsStatus": "approved",
+      "altJa": "AIモデルと実在モデルを象徴する二人が並ぶ高級スタジオ映像",
+      "altEn": "Two models representing real talent and digital possibility in a luxury studio"
+    },
+    {
+      "id": "hero-hybrid-mobile",
+      "slot": "hero.mobile",
+      "type": "video",
+      "category": "hero",
+      "src": "video/hero/hero-hybrid-mobile.mp4",
+      "poster": "image/posters/hero-hybrid-mobile.webp",
+      "aspectRatio": "9:16",
+      "autoplay": true,
+      "loop": true,
+      "muted": true,
+      "required": false,
+      "rightsStatus": "approved",
+      "altJa": "縦構図のヒーロー映像",
+      "altEn": "Vertical hero film"
+    },
+    {
+      "id": "real-studio-flash",
+      "slot": "realTalent.studio",
+      "type": "video",
+      "category": "real-models",
+      "src": "video/real-models/real-studio-flash-01.mp4",
+      "poster": "image/posters/real-studio-flash-01.webp",
+      "aspectRatio": "16:9",
+      "rightsStatus": "approved",
+      "altJa": "スタジオでストロボが光る実在モデルの撮影現場",
+      "altEn": "A real model photographed in a studio as the strobe fires"
+    },
+    {
+      "id": "real-backstage",
+      "slot": "realTalent.backstage",
+      "type": "video",
+      "category": "real-models",
+      "src": "video/real-models/real-backstage-01.mp4",
+      "poster": "image/posters/real-backstage-01.webp",
+      "aspectRatio": "16:9",
+      "rightsStatus": "approved",
+      "altJa": "撮影直前のヘアメイクと鏡の舞台裏",
+      "altEn": "Backstage hair and makeup moments before the shoot"
+    },
+    {
+      "id": "hybrid-digital-twin",
+      "slot": "hybrid.twin",
+      "type": "video",
+      "category": "hybrid",
+      "src": "video/hybrid/hybrid-digital-twin-01.mp4",
+      "poster": "image/posters/hybrid-digital-twin-01.webp",
+      "aspectRatio": "16:9",
+      "rightsStatus": "approved",
+      "altJa": "実在モデルの表現領域がデジタルへ拡張される映像",
+      "altEn": "A real model's creative range expanding into digital expression"
+    },
+    {
+      "id": "hybrid-world-transform",
+      "slot": "hybrid.transform",
+      "type": "video",
+      "category": "hybrid",
+      "src": "video/hybrid/hybrid-world-transform-01.mp4",
+      "poster": "image/posters/hybrid-world-transform-01.webp",
+      "aspectRatio": "16:9",
+      "rightsStatus": "approved",
+      "altJa": "同一人物のまま衣装と背景が変化する映像",
+      "altEn": "Outfit and world transform while the person stays the same"
+    },
+    {
+      "id": "meridian-real",
+      "slot": "meridian.real",
+      "type": "image",
+      "category": "backgrounds",
+      "src": "image/backgrounds/meridian-real.webp",
+      "aspectRatio": "16:9",
+      "rightsStatus": "approved",
+      "altJa": "実在の撮影スタジオに立つモデル",
+      "altEn": "The model standing in a real photography studio"
+    },
+    {
+      "id": "meridian-digital",
+      "slot": "meridian.digital",
+      "type": "image",
+      "category": "backgrounds",
+      "src": "image/backgrounds/meridian-digital.webp",
+      "aspectRatio": "16:9",
+      "rightsStatus": "approved",
+      "altJa": "デジタル表現の世界に立つ同一人物のモデル",
+      "altEn": "The same model standing in a digital fashion world"
+    },
+    {
+      "id": "venus-ambient-loop",
+      "slot": "audio.ambient",
+      "type": "audio",
+      "category": "music",
+      "src": "audio/music/venus-ambient-loop.mp3",
+      "required": false,
+      "rightsStatus": "approved"
+    }
+  ]
+}

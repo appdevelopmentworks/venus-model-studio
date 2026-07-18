@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "hybrid-fashion-identity",
+    "status": "concept",
+    "published": true,
+    "title": {
+      "ja": "Hybrid Fashion Identity",
+      "en": "Hybrid Fashion Identity"
+    },
+    "summary": {
+      "ja": "実在の撮影表現とAI映像を連続したブランド体験へ展開する自主制作。",
+      "en": "A concept project connecting real photography and AI film into one brand experience."
+    },
+    "category": [
+      "hybrid",
+      "fashion",
+      "film"
+    ],
+    "cover": "image/projects/hybrid-fashion-identity/cover.webp",
+    "video": "video/hybrid/hybrid-digital-twin-01.mp4",
+    "gallery": [
+      "image/projects/hybrid-fashion-identity/detail-01.webp",
+      "image/projects/hybrid-fashion-identity/detail-02.webp"
+    ],
+    "relatedModels": [
+      "ai-elena-west"
+    ],
+    "challenge": {
+      "ja": "人間性を失わず、AIによる表現拡張を示す。",
+      "en": "Show AI expansion without losing the human presence."
+    },
+    "approach": {
+      "ja": "実写スタジオとデジタル空間を一つの動きで接続。",
+      "en": "Connect the physical studio and digital environment in one controlled motion."
+    },
+    "humanContribution": {
+      "ja": "企画、撮影、美術判断、編集、品質管理。",
+      "en": "Direction, photography, art decisions, editing and quality control."
+    },
+    "aiContribution": {
+      "ja": "背景・衣装展開、短い映像生成。",
+      "en": "Environment and wardrobe variations, short-form motion generation."
+    },
+    "credits": []
+  }
+]

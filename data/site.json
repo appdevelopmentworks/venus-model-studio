@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "brand": "Venus Model Studio",
+  "contactEmail": "contact@venus-model-studio.example",
+  "operator": "Venus Model Studio",
+  "locationScope": {
+    "ja": "東京を拠点に、国内外の案件に対応",
+    "en": "Based in Tokyo, working with clients worldwide"
+  },
+  "social": {
+    "instagram": "",
+    "youtube": "",
+    "tiktok": ""
+  },
+  "analytics": {
+    "gaId": "",
+    "vercelAnalytics": false
+  }
+}

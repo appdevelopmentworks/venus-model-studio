@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "models": [
+    {
+      "slug": "ai-elena-west",
+      "type": "ai",
+      "displayName": "ELENA",
+      "featured": true,
+      "published": true,
+      "rightsStatus": "approved",
+      "portrait": "image/posters/ai-western-beauty-01.webp",
+      "video": "video/ai-models/ai-western-beauty-01.mp4",
+      "videoPoster": "image/posters/ai-western-beauty-01.webp",
+      "focalX": 0.6,
+      "categories": ["beauty", "fashion", "commercial"],
+      "bio": {
+        "ja": "完全に架空のAIモデル。美容・ファッション・広告のためにデザインされたコンセプトモデルです。",
+        "en": "A fully fictional AI model designed for beauty, fashion and commercial concepts.",
+        "ru": "Полностью вымышленная AI-модель, созданная для бьюти-, fashion- и рекламных концепций.",
+        "zh-CN": "完全虚构的 AI 模特，为美妆、时尚与广告概念而设计。",
+        "ko": "완전히 가상의 AI 모델. 뷰티·패션·광고를 위해 디자인된 콘셉트 모델입니다."
+      },
+      "capabilities": {
+        "ja": ["美容広告", "ファッション", "映像コンセプト"],
+        "en": ["Beauty campaigns", "Fashion", "Film concepts"],
+        "ru": ["Бьюти-кампании", "Мода", "Кинематографические концепции"],
+        "zh-CN": ["美妆广告", "时尚", "影像概念"],
+        "ko": ["뷰티 광고", "패션", "영상 콘셉트"]
+      }
+    },
+    {
+      "slug": "ai-freja-nordic",
+      "type": "ai",
+      "displayName": "FREJA",
+      "featured": true,
+      "published": true,
+      "rightsStatus": "approved",
+      "portrait": "image/posters/ai-nordic-runway-01.webp",
+      "video": "video/ai-models/ai-nordic-runway-01.mp4",
+      "videoPoster": "image/posters/ai-nordic-runway-01.webp",
+      "focalX": 0.68,
+      "categories": ["runway", "fashion"],
+      "bio": {
+        "ja": "完全に架空のAIモデル。ランウェイとハイファッションのために設計されました。",
+        "en": "A fully fictional AI model designed for runway and high fashion.",
+        "ru": "Полностью вымышленная AI-модель, созданная для подиума и высокой моды.",
+        "zh-CN": "完全虚构的 AI 模特，为 T 台与高级时装而设计。",
+        "ko": "완전히 가상의 AI 모델. 런웨이와 하이패션을 위해 설계되었습니다."
+      },
+      "capabilities": {
+        "ja": ["ランウェイ", "ハイファッション", "ルックブック"],
+        "en": ["Runway", "High fashion", "Lookbooks"],
+        "ru": ["Подиум", "Высокая мода", "Лукбуки"],
+        "zh-CN": ["T 台", "高级时装", "型录"],
+        "ko": ["런웨이", "하이패션", "룩북"]
+      }
+    },
+    {
+      "slug": "ai-camila-latin",
+      "type": "ai",
+      "displayName": "CAMILA",
+      "featured": true,
+      "published": true,
+      "rightsStatus": "approved",
+      "portrait": "image/posters/ai-latin-commercial-01.webp",
+      "video": "video/ai-models/ai-latin-commercial-01.mp4",
+      "videoPoster": "image/posters/ai-latin-commercial-01.webp",
+      "focalX": 0.3,
+      "categories": ["commercial", "beauty", "travel"],
+      "bio": {
+        "ja": "完全に架空のAIモデル。ホテル・旅行・ライフスタイル広告向けの親しみやすい存在感。",
+        "en": "A fully fictional AI model with an approachable presence for hospitality, travel and lifestyle.",
+        "ru": "Полностью вымышленная AI-модель с располагающим образом для сферы гостеприимства, путешествий и лайфстайла.",
+        "zh-CN": "完全虚构的 AI 模特，为酒店、旅行与生活方式广告带来亲和的存在感。",
+        "ko": "완전히 가상의 AI 모델. 호텔·여행·라이프스타일 광고에 어울리는 친근한 존재감."
+      },
+      "capabilities": {
+        "ja": ["広告", "ホテル・旅行", "ライフスタイル"],
+        "en": ["Commercials", "Hospitality & travel", "Lifestyle"],
+        "ru": ["Реклама", "Гостеприимство и путешествия", "Лайфстайл"],
+        "zh-CN": ["广告", "酒店与旅行", "生活方式"],
+        "ko": ["광고", "호텔·여행", "라이프스타일"]
+      }
+    },
+    {
+      "slug": "ai-mio-hybrid",
+      "type": "ai",
+      "displayName": "MIO",
+      "featured": true,
+      "published": true,
+      "rightsStatus": "approved",
+      "portrait": "image/posters/ai-japanese-mixed-01.webp",
+      "video": "video/ai-models/ai-japanese-mixed-01.mp4",
+      "videoPoster": "image/posters/ai-japanese-mixed-01.webp",
+      "focalX": 0.52,
+      "categories": ["commercial", "beauty"],
+      "bio": {
+        "ja": "完全に架空のAIモデル。日本市場向けの自然で知的な表情を持つコンセプトモデル。",
+        "en": "A fully fictional AI model with a natural, intelligent presence for the Japanese market.",
+        "ru": "Полностью вымышленная AI-модель с естественным, интеллигентным образом для японского рынка.",
+        "zh-CN": "完全虚构的 AI 模特，为日本市场打造自然而知性的气质。",
+        "ko": "완전히 가상의 AI 모델. 일본 시장을 위한 자연스럽고 지적인 표정을 지닌 콘셉트 모델."
+      },
+      "capabilities": {
+        "ja": ["国内広告", "美容", "SNSコンテンツ"],
+        "en": ["Japanese campaigns", "Beauty", "Social content"],
+        "ru": ["Японские кампании", "Бьюти", "Контент для соцсетей"],
+        "zh-CN": ["日本广告", "美妆", "社交内容"],
+        "ko": ["일본 광고", "뷰티", "SNS 콘텐츠"]
+      }
+    }
+  ]
+}

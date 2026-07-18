@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "title": "Venus Model Studio — Hybrid Studio of AI & Real Models",
+    "description": "Real talent, digital possibility. A new production studio where AI models and real models create together."
+  },
+  "nav": {
+    "home": "Home",
+    "models": "Models",
+    "services": "Services",
+    "projects": "Projects",
+    "forTalents": "For Talents",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "common": {
+    "aiModel": "AI MODEL",
+    "realModel": "REAL MODEL",
+    "aiEnhanced": "AI-ENHANCED REAL TALENT",
+    "conceptProject": "CONCEPT PROJECT",
+    "clientWork": "CLIENT WORK",
+    "viewProfile": "View profile",
+    "viewProject": "View project",
+    "viewAll": "View all",
+    "comingSoon": "Coming soon",
+    "scrollDown": "Scroll",
+    "backTo": "Back to list"
+  },
+  "preloader": {
+    "loading": "LOADING",
+    "studio": "VENUS MODEL STUDIO"
+  },
+  "hero": {
+    "taglinePrimary": "REAL TALENT. DIGITAL POSSIBILITY.",
+    "taglineSecondary": "AI Models × Real Models × Cinematic Production",
+    "viewModels": "View Models",
+    "startProject": "Start a Project",
+    "videoAlt": "Two models representing real talent and digital possibility in a luxury studio"
+  },
+  "manifesto": {
+    "kicker": "01 — MANIFESTO",
+    "l1": "REAL TALENT.",
+    "l2": "DIGITAL POSSIBILITY.",
+    "l3": "We unite the presence of real models",
+    "l4": "with the creative freedom of AI — in one studio.",
+    "band": ["REAL", "HYBRID", "AI"]
+  },
+  "aiModels": {
+    "kicker": "02 — AI MODELS",
+    "title": "Fictional. Yet utterly convincing.",
+    "body": "Fully original AI models — never modeled on real people. Faces and presence designed for your brand.",
+    "drag": "Drag to rotate"
+  },
+  "realTalent": {
+    "kicker": "03 — REAL TALENT",
+    "title": "Set energy cannot be generated.",
+    "body": "The strobe flash, the charged air, the accidental perfect moment. Real photography is our origin."
+  },
+  "meridian": {
+    "kicker": "04 — HYBRID",
+    "title": "Move the line yourself.",
+    "real": "REAL",
+    "digital": "DIGITAL",
+    "drag": "DRAG",
+    "body": "The same person — from a real shoot into digital expression. AI is expansion, not replacement.",
+    "cta": "About hybrid production"
+  },
+  "services": {
+    "kicker": "05 — SERVICES",
+    "title": "What we do"
+  },
+  "contact": {
+    "kicker": "06 — CONTACT",
+    "title": "Have a vision to shoot?",
+    "corporate": "For brands & producers",
+    "talent": "For models & talents",
+    "cta": "Get in touch"
+  },
+  "ending": {
+    "tagline": "REAL TALENT. DIGITAL POSSIBILITY."
+  },
+  "footer": {
+    "note": "AI models and real models are clearly distinguished on every page.",
+    "rights": "© {year} Venus Model Studio",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
+  },
+  "servicesPage": {
+    "kicker": "SERVICES",
+    "title": "What we do",
+    "intro": "From AI model production to real-model photography and the hybrid work that unites them — we design the roles of people and AI around your brand's goals.",
+    "detailLabel": "Detail",
+    "cta": "Enquire about this"
+  },
+  "projectsPage": {
+    "kicker": "PROJECTS",
+    "title": "Selected work",
+    "intro": "What's published now are self-initiated concept projects. We never present fabricated client names, awards, or press mentions as real.",
+    "challenge": "Challenge",
+    "approach": "Approach",
+    "human": "Human contribution",
+    "ai": "Where AI was used",
+    "empty": "Projects are being prepared for release."
+  },
+  "forTalentsPage": {
+    "kicker": "FOR MODELS & TALENTS",
+    "title": "For models & talents",
+    "intro": "We welcome real models, actors, aspiring talents and international models. We think through how your likeness is handled in the AI era, together with you.",
+    "benefitsTitle": "Why join",
+    "benefits": [
+      "Consistent creation from studio shoots to film and AI expression",
+      "Work only within a clearly agreed scope of likeness usage",
+      "Branding opportunities that open doors at home and abroad"
+    ],
+    "rightsTitle": "On the use of likeness",
+    "rights": "If your likeness is used for AI expression, we always agree the scope in advance. We never use it without consent or for the purpose of replacement, and publish only within the approved scope.",
+    "flowTitle": "From shoot to AI expression",
+    "flow": [
+      "Consultation and vision interview",
+      "Studio or location shoot",
+      "AI expression and extension within consent",
+      "Final review of what goes public"
+    ],
+    "cta": "Talk to us about joining"
+  },
+  "aboutPage": {
+    "kicker": "ABOUT",
+    "title": "Uniting real talent with digital possibility.",
+    "lead": "Venus Model Studio is neither an anonymous AI generation shop nor a traditional model-agency directory. We are a studio that integrates real talent, photographic craft, AI expression and film production.",
+    "positionTitle": "Where we stand",
+    "position": "We work with both AI models and real models, and always distinguish them clearly. We see AI not as a replacement for people but as a tool that widens what's possible in expression.",
+    "principleTitle": "Our promises",
+    "principles": [
+      "Clearly distinguish AI models, real models and AI-enhanced real talent in visuals and words",
+      "Never fabricate client names, awards or press mentions",
+      "Use a real person's likeness only within the scope they have consented to"
+    ]
+  },
+  "contactPage": {
+    "kicker": "CONTACT",
+    "title": "Get in touch",
+    "intro": "Whether you're a brand or producer, or a model or talent, you can reach us here.",
+    "typeLabel": "Enquiry type",
+    "typeCorporate": "Brand / production enquiry",
+    "typeTalent": "Model / talent enquiry",
+    "typeOther": "Other",
+    "nameLabel": "Name",
+    "orgLabel": "Organisation (optional)",
+    "emailLabel": "Email",
+    "messageLabel": "Message",
+    "consentLabel": "I agree to the privacy policy",
+    "submit": "Send",
+    "sending": "Sending…",
+    "mailtoNote": "Pressing send will open your email application.",
+    "successTitle": "Thank you",
+    "success": "Your enquiry has been received. We'll be in touch shortly.",
+    "errorTitle": "Could not send",
+    "error": "Please try again later, or contact us directly by email.",
+    "errors": {
+      "name": "Please enter your name",
+      "email": "Please enter a valid email address",
+      "message": "Please enter a message (10 characters or more)",
+      "consent": "Consent to the privacy policy is required"
+    }
+  },
+  "legal": {
+    "privacyTitle": "Privacy Policy",
+    "termsTitle": "Terms of Use",
+    "lastUpdated": "Last updated",
+    "privacyBody": "Personal information collected through this site's contact form is used solely to respond to your enquiry and is never shared with third parties without your consent. If you would like the information we hold deleted, please contact us. Where analytics are used, they are handled statistically and do not identify individuals.",
+    "termsBody": "Copyright in the images, video and text on this site belongs to Venus Model Studio or the rightful rights holders. All AI models are fictional and do not represent real people. The likeness of real models is published only within the scope they have consented to. Content may change without notice."
+  }
+}

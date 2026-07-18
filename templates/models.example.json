@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "ai-elena-west",
+    "type": "ai",
+    "displayName": "Elena",
+    "featured": true,
+    "published": true,
+    "rightsStatus": "approved",
+    "portrait": "image/models/ai/ai-elena-west/portrait.webp",
+    "fullbody": "image/models/ai/ai-elena-west/fullbody.webp",
+    "editorial": "image/models/ai/ai-elena-west/editorial.webp",
+    "video": "video/ai-models/ai-western-beauty-01.mp4",
+    "videoPoster": "image/posters/ai-western-beauty-01.webp",
+    "categories": [
+      "beauty",
+      "fashion",
+      "commercial"
+    ],
+    "bio": {
+      "ja": "完全に架空のAIモデル。美容、ファッション、広告向けのコンセプトモデルです。",
+      "en": "A completely fictional AI model designed for beauty, fashion and commercial concepts."
+    },
+    "capabilities": {
+      "ja": [
+        "美容広告",
+        "ファッション",
+        "映像コンセプト"
+      ],
+      "en": [
+        "Beauty campaigns",
+        "Fashion",
+        "Film concepts"
+      ]
+    }
+  },
+  {
+    "slug": "real-model-001",
+    "type": "real",
+    "displayName": "Replace with approved stage name",
+    "featured": false,
+    "published": false,
+    "rightsStatus": "pending",
+    "portrait": "image/models/real/real-model-001/portrait.webp",
+    "categories": [
+      "fashion"
+    ],
+    "bio": {
+      "ja": "公開許諾後に記入",
+      "en": "Complete after approval"
+    },
+    "capabilities": {
+      "ja": [],
+      "en": []
+    }
+  }
+]

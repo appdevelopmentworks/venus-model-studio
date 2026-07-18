@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "id": "hero-hybrid-desktop",
+      "type": "video",
+      "category": "hero",
+      "src": "video/hero/hero-hybrid-desktop.mp4",
+      "webm": "video/hero/hero-hybrid-desktop.webm",
+      "poster": "image/posters/hero-hybrid-desktop.webp",
+      "aspectRatio": "16:9",
+      "autoplay": true,
+      "loop": true,
+      "muted": true,
+      "required": true,
+      "rightsStatus": "approved",
+      "altJa": "AIモデルと実在モデルを象徴する二人が並ぶ高級スタジオ映像",
+      "altEn": "Two models representing real talent and digital possibility in a luxury studio"
+    },
+    {
+      "id": "venus-ambient-loop",
+      "type": "audio",
+      "category": "music",
+      "src": "audio/music/venus-ambient-loop.mp3",
+      "required": false,
+      "rightsStatus": "approved"
+    }
+  ]
+}

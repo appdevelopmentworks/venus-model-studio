@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "title": "Venus Model Studio — AIモデル × 実在モデルのハイブリッドスタジオ",
+    "description": "実在の才能を、デジタルの可能性へ。AIモデルと実在モデルが共創する、新しい映像制作スタジオ。"
+  },
+  "nav": {
+    "home": "ホーム",
+    "models": "モデル",
+    "services": "サービス",
+    "projects": "プロジェクト",
+    "forTalents": "モデル・タレントの方へ",
+    "about": "私たちについて",
+    "contact": "お問い合わせ",
+    "menu": "メニュー",
+    "close": "閉じる"
+  },
+  "common": {
+    "aiModel": "AI MODEL",
+    "realModel": "REAL MODEL",
+    "aiEnhanced": "AI-ENHANCED REAL TALENT",
+    "conceptProject": "CONCEPT PROJECT",
+    "clientWork": "CLIENT WORK",
+    "viewProfile": "プロフィールを見る",
+    "viewProject": "プロジェクトを見る",
+    "viewAll": "すべて見る",
+    "comingSoon": "近日公開",
+    "scrollDown": "スクロール",
+    "backTo": "一覧へ戻る"
+  },
+  "preloader": {
+    "loading": "LOADING",
+    "studio": "VENUS MODEL STUDIO"
+  },
+  "hero": {
+    "taglinePrimary": "実在の才能を、デジタルの可能性へ。",
+    "taglineSecondary": "AI Models × Real Models × Cinematic Production",
+    "viewModels": "モデルを見る",
+    "startProject": "プロジェクトの相談",
+    "videoAlt": "AIモデルと実在モデルを象徴する二人が並ぶ高級スタジオ映像"
+  },
+  "manifesto": {
+    "kicker": "01 — MANIFESTO",
+    "l1": "REAL TALENT.",
+    "l2": "DIGITAL POSSIBILITY.",
+    "l3": "私たちは、実在するモデルの輝きと",
+    "l4": "AIが拓く表現の自由を、ひとつのスタジオで束ねる。",
+    "band": ["REAL", "HYBRID", "AI"]
+  },
+  "aiModels": {
+    "kicker": "02 — AI MODELS",
+    "title": "架空。しかし、本物の説得力。",
+    "body": "完全にオリジナルのAIモデルたち。実在の人物には似せず、ブランドのために設計された顔と存在感。",
+    "drag": "ドラッグで回転"
+  },
+  "realTalent": {
+    "kicker": "03 — REAL TALENT",
+    "title": "現場の熱は、生成できない。",
+    "body": "ストロボの閃光、張り詰めた空気、偶然の一瞬。実在モデルの撮影こそ、私たちの原点。"
+  },
+  "meridian": {
+    "kicker": "04 — HYBRID",
+    "title": "境界線を、動かしてみてください。",
+    "real": "REAL",
+    "digital": "DIGITAL",
+    "drag": "ドラッグ",
+    "body": "同じひとり。実在の撮影から、デジタルの表現へ。AIは置き換えではなく、拡張です。",
+    "cta": "ハイブリッド制作について"
+  },
+  "services": {
+    "kicker": "05 — SERVICES",
+    "title": "できること"
+  },
+  "contact": {
+    "kicker": "06 — CONTACT",
+    "title": "つくりたい映像が、ありますか。",
+    "corporate": "企業・制作会社の方",
+    "talent": "モデル・タレントの方",
+    "cta": "お問い合わせ"
+  },
+  "ending": {
+    "tagline": "REAL TALENT. DIGITAL POSSIBILITY."
+  },
+  "footer": {
+    "note": "AIモデルと実在モデルは、すべてのページで明確に区別して表示しています。",
+    "rights": "© {year} Venus Model Studio",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  },
+  "servicesPage": {
+    "kicker": "SERVICES",
+    "title": "できること",
+    "intro": "AIモデル制作から実在モデル撮影、その両方を束ねるハイブリッド制作まで。ブランドの目的に合わせて、人とAIの役割を設計します。",
+    "detailLabel": "詳細",
+    "cta": "この内容で相談する"
+  },
+  "projectsPage": {
+    "kicker": "PROJECTS",
+    "title": "制作事例",
+    "intro": "現在公開しているのは、自主制作のコンセプトプロジェクトです。実在の顧客名・受賞歴・掲載実績を偽って掲載することはありません。",
+    "challenge": "課題",
+    "approach": "アプローチ",
+    "human": "人が担当した部分",
+    "ai": "AIを使用した部分",
+    "empty": "公開できるプロジェクトを準備中です。"
+  },
+  "forTalentsPage": {
+    "kicker": "FOR MODELS & TALENTS",
+    "title": "モデル・タレントの方へ",
+    "intro": "実在モデル、女優、タレント志望の方、海外モデルの参加を歓迎します。AI時代における肖像の扱いを、あなたと一緒に考えます。",
+    "benefitsTitle": "参加のメリット",
+    "benefits": [
+      "スタジオ撮影から映像・AI表現まで、一貫した作品づくり",
+      "肖像の利用範囲を明確に合意したうえでの活動",
+      "国内外の案件につながるブランディング機会"
+    ],
+    "rightsTitle": "肖像の扱いについて",
+    "rights": "あなたの肖像をAI表現に用いる場合は、必ず事前に利用範囲を合意します。同意のない利用や、置き換えを目的とした利用は行いません。承諾済みの範囲でのみ公開します。",
+    "flowTitle": "撮影からAI表現までの流れ",
+    "flow": [
+      "ご相談・世界観のヒアリング",
+      "スタジオまたはロケでの撮影",
+      "同意の範囲でのAI表現・拡張",
+      "公開範囲の最終確認"
+    ],
+    "cta": "参加を相談する"
+  },
+  "aboutPage": {
+    "kicker": "ABOUT",
+    "title": "実在の才能と、デジタルの可能性を束ねる。",
+    "lead": "Venus Model Studioは、AI専業の匿名的な生成会社でも、従来型モデル事務所の名簿サイトでもありません。実在の才能、撮影経験、AI表現、映像制作を統合するスタジオです。",
+    "positionTitle": "私たちの立ち位置",
+    "position": "AIモデルと実在モデルの両方を扱い、それぞれを常に明確に区別します。AIは人間を置き換えるものではなく、表現の可能性を広げる道具だと考えています。",
+    "principleTitle": "約束",
+    "principles": [
+      "AIモデル・実在モデル・AI編集した実在人物を、視覚と文章で明確に区別する",
+      "実在の顧客名・受賞歴・掲載実績を捏造しない",
+      "実在人物の肖像は、本人が同意した範囲でのみ使用する"
+    ]
+  },
+  "contactPage": {
+    "kicker": "CONTACT",
+    "title": "お問い合わせ",
+    "intro": "企業・制作会社からのご相談、モデル・タレントの方からのご相談、どちらもこちらから承ります。",
+    "typeLabel": "お問い合わせ種別",
+    "typeCorporate": "企業・制作の相談",
+    "typeTalent": "モデル・タレントの相談",
+    "typeOther": "その他",
+    "nameLabel": "お名前",
+    "orgLabel": "組織名(任意)",
+    "emailLabel": "メールアドレス",
+    "messageLabel": "本文",
+    "consentLabel": "プライバシーポリシーに同意します",
+    "submit": "送信する",
+    "sending": "送信中…",
+    "mailtoNote": "送信ボタンを押すと、メールソフトが開きます。",
+    "successTitle": "ありがとうございます",
+    "success": "お問い合わせを受け付けました。担当者よりご連絡いたします。",
+    "errorTitle": "送信できませんでした",
+    "error": "時間をおいて再度お試しいただくか、直接メールでご連絡ください。",
+    "errors": {
+      "name": "お名前を入力してください",
+      "email": "有効なメールアドレスを入力してください",
+      "message": "本文を入力してください(10文字以上)",
+      "consent": "プライバシーポリシーへの同意が必要です"
+    }
+  },
+  "legal": {
+    "privacyTitle": "プライバシーポリシー",
+    "termsTitle": "利用規約",
+    "lastUpdated": "最終更新",
+    "privacyBody": "本サイトのお問い合わせフォームで取得した個人情報は、ご相談への対応のためにのみ使用し、ご本人の同意なく第三者に提供することはありません。取得した情報の削除をご希望の場合は、お問い合わせ先までご連絡ください。アクセス解析を利用する場合は、個人を特定しない範囲で統計的に利用します。",
+    "termsBody": "本サイトに掲載する画像・動画・文章の著作権は、Venus Model Studioまたは正当な権利者に帰属します。AIモデルはすべて架空の存在であり、実在の人物を表すものではありません。実在モデルの肖像は、本人が同意した範囲でのみ掲載しています。掲載内容は予告なく変更される場合があります。"
+  }
+}

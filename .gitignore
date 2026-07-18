@@ -1,0 +1,55 @@
+# ---- dependencies ----
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# ---- Next.js build output ----
+/.next/
+/out/
+/build
+next-env.d.ts
+
+# ---- generated delivery copy of assets ----
+# public/assets/ は scripts/sync-assets.mjs が assets/ から生成する。
+# 正本は assets/ 側をコミットし、こちらは prebuild(Vercel含む)で再生成する。
+/public/assets/
+
+# ---- working-source originals (配信されない作業用原版。任意でignore) ----
+# Meridian等の派生WebPは assets/image/backgrounds に生成済みでコミット対象。
+# 原版PNGはサイズが大きく配信もされないため除外する。
+/assets/image/source/
+
+# ---- env & secrets ----
+.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ---- testing / tooling artifacts ----
+/coverage
+/playwright-report/
+/test-results/
+/blob-report/
+/playwright/.cache/
+*.tsbuildinfo
+
+# ---- vercel ----
+.vercel
+
+# ---- editor / OS ----
+.DS_Store
+Thumbs.db
+*.pem
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.idea/
+.vscode/*
+!.vscode/extensions.json

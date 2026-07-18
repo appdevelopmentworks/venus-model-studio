@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "sections": [
+    { "id": "hero", "component": "hero", "enabled": true, "order": 10 },
+    { "id": "manifesto", "component": "manifesto", "enabled": true, "order": 20 },
+    { "id": "ai-models", "component": "aiModels", "enabled": true, "order": 30, "variant": "orbit", "dataSource": "models:ai:featured", "minItems": 3 },
+    { "id": "real-talent", "component": "realTalent", "enabled": true, "order": 40, "variant": "atelier-wall" },
+    { "id": "hybrid", "component": "hybridMeridian", "enabled": true, "order": 50 },
+    { "id": "services", "component": "services", "enabled": true, "order": 60 },
+    { "id": "featured-models", "component": "featuredModels", "enabled": true, "order": 70, "dataSource": "models:featured", "minItems": 3 },
+    { "id": "featured-projects", "component": "featuredProjects", "enabled": true, "order": 80, "dataSource": "projects:published", "minItems": 1 },
+    { "id": "for-talents", "component": "forTalents", "enabled": true, "order": 90 },
+    { "id": "showreel", "component": "showreel", "enabled": false, "order": 100 },
+    { "id": "contact", "component": "contact", "enabled": true, "order": 110 },
+    { "id": "ending", "component": "endingSeal", "enabled": true, "order": 120 }
+  ]
+}

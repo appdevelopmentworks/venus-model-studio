@@ -1,0 +1,16 @@
+{
+  "brand": "Venus Model Studio",
+  "tagline": {
+    "ja": "実在の才能を、デジタルの可能性へ。",
+    "en": "REAL TALENT. DIGITAL POSSIBILITY.",
+    "ru": "РЕАЛЬНЫЙ ТАЛАНТ. ЦИФРОВЫЕ ВОЗМОЖНОСТИ.",
+    "zh-CN": "真实才华，数字可能。",
+    "ko": "현실의 재능을 디지털 가능성으로."
+  },
+  "contactEmail": "replace@example.com",
+  "social": {
+    "youtube": "",
+    "instagram": "",
+    "tiktok": ""
+  }
+}
