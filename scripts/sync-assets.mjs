@@ -65,13 +65,19 @@ for (const r of srcFiles) {
 }
 
 // 孤児ファイルの削除
+// 注意: fs.rmSync は Node 24.x(Windows)で日本語等の非ASCIIファイル名に対し
+// ネイティブクラッシュ(STATUS_STACK_BUFFER_OVERRUN)する。unlinkSyncを使うこと。
 const destFiles = walk(DEST, DEST);
 const srcSet = new Set(srcFiles);
 let removed = 0;
 for (const r of destFiles) {
   if (!srcSet.has(r)) {
-    fs.rmSync(path.join(DEST, r));
-    removed++;
+    try {
+      fs.unlinkSync(path.join(DEST, r));
+      removed++;
+    } catch (e) {
+      console.warn(`[sync-assets] 削除失敗(手動で削除してください): ${r} — ${e.message}`);
+    }
   }
 }
 

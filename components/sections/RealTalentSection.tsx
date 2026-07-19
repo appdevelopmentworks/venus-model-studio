@@ -92,8 +92,9 @@ export function RealTalentSection({ items }: { items: WallItem[] }) {
           </figure>
 
           {rest.map((item, i) => (
-            <figure key={i} className="group relative overflow-hidden">
-              <div className="aspect-video overflow-hidden bg-panel md:aspect-[3/4]">
+            <figure key={i} className="group relative flex flex-col justify-end overflow-hidden">
+              {/* 素材は16:9横長。縦クロップせず全体を見せる(下端をメインと揃える) */}
+              <div className="aspect-video overflow-hidden bg-panel">
                 <AutoPlayVideo
                   src={item.src}
                   poster={item.poster}

@@ -61,6 +61,23 @@ function checkBudget(relPath) {
 
 console.log('[validate-assets] start' + (production ? ' (production)' : ''));
 
+// --- ファイル名規則(docs/06: 小文字英数字とハイフンのみ。空白・日本語禁止) ---
+// 規則外の名前はWindows環境でツールのクラッシュや配信不具合の原因になる
+function walkNames(dir, base, out = []) {
+  if (!fs.existsSync(dir)) return out;
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, e.name);
+    if (e.isDirectory()) walkNames(full, base, out);
+    else out.push(path.relative(base, full).split(path.sep).join('/'));
+  }
+  return out;
+}
+for (const r of walkNames(ASSETS, ASSETS)) {
+  if (!/^[a-z0-9\-._/]+$/i.test(r) || /\s/.test(r)) {
+    warn(`ファイル名が命名規則違反です(空白・日本語等): assets/${r}`);
+  }
+}
+
 // --- manifest ---
 const manifestPath = path.join(ASSETS, 'asset-manifest.json');
 const manifest = fs.existsSync(manifestPath) ? readJson(manifestPath) : null;

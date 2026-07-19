@@ -150,14 +150,24 @@ export function MeridianSection({ realUrl, digitalUrl, realAlt, digitalAlt }: Pr
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100svh] overflow-hidden bg-bg"
+      className="relative overflow-hidden bg-bg py-24 md:py-32"
       data-section="hybrid"
     >
-      {/* ステージ */}
+      {/* 見出し(ステージの上に重ねず、素材を隠さない) */}
+      <div className="mx-auto max-w-6xl px-6">
+        <p className="section-kicker">{t('kicker')}</p>
+        <h2 className="font-display mt-4 max-w-xl text-4xl leading-tight text-ivory md:text-6xl">
+          {t('title')}
+        </h2>
+      </div>
+
+      {/* ステージ: 元素材(16:9)を切り抜かず全体を表示する。
+          高さが100svhを超えないよう幅側を制限し、常に正確な16:9を維持 */}
       <div
         ref={stageRef}
         data-cursor="drag"
-        className="absolute inset-0 cursor-ew-resize touch-pan-y select-none"
+        className="relative mx-auto mt-10 aspect-video cursor-ew-resize touch-pan-y select-none overflow-hidden bg-panel"
+        style={{ width: 'min(100%, calc(100svh * 16 / 9))' }}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
@@ -172,7 +182,7 @@ export function MeridianSection({ realUrl, digitalUrl, realAlt, digitalAlt }: Pr
             progressRef={progressRef}
           />
         ) : (
-          /* CSSフォールバック: clip-path比較スライダー */
+          /* CSSフォールバック: clip-path比較スライダー(枠が16:9なので全体が見える) */
           <div className="absolute inset-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -211,27 +221,17 @@ export function MeridianSection({ realUrl, digitalUrl, realAlt, digitalAlt }: Pr
         </div>
 
         {/* 世界ラベル */}
-        <span className="pointer-events-none absolute top-1/2 left-6 -translate-y-1/2 text-[0.65rem] tracking-[0.4em] text-ivory/80 [writing-mode:vertical-rl]">
+        <span className="pointer-events-none absolute top-1/2 left-4 -translate-y-1/2 text-[0.65rem] tracking-[0.4em] text-ivory/80 [writing-mode:vertical-rl]">
           {t('real')}
         </span>
-        <span className="pointer-events-none absolute top-1/2 right-6 -translate-y-1/2 text-[0.65rem] tracking-[0.4em] text-gold [writing-mode:vertical-rl]">
+        <span className="pointer-events-none absolute top-1/2 right-4 -translate-y-1/2 text-[0.65rem] tracking-[0.4em] text-gold [writing-mode:vertical-rl]">
           {t('digital')}
         </span>
-
-        {/* 上下のシネマティックグラデーション */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-bg to-transparent" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-bg to-transparent" />
       </div>
 
-      {/* DOMテキストレイヤー */}
-      <div className="pointer-events-none relative z-20 mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-between px-6 py-24">
-        <div>
-          <p className="section-kicker">{t('kicker')}</p>
-          <h2 className="font-display mt-4 max-w-xl text-4xl leading-tight text-ivory md:text-6xl">
-            {t('title')}
-          </h2>
-        </div>
-        <div className="pointer-events-auto max-w-md">
+      {/* 本文+スライダー(ステージの下) */}
+      <div className="mx-auto mt-10 max-w-6xl px-6">
+        <div className="max-w-md">
           <p className="text-sm leading-relaxed text-soft">{t('body')}</p>
           <span className="mt-4 inline-block border border-gold/40 px-3 py-1 text-[0.6rem] tracking-[0.25em] text-gold">
             AI-ENHANCED REAL TALENT

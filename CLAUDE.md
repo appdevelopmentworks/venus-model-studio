@@ -45,6 +45,14 @@ Claude内蔵ブラウザペインは非表示タブ扱いでrAFが停止し、**
 ### 5. UIの重なり
 モバイルメニューは `<header>`(z-50)の**外**に置く(内側だとheaderがクリックを遮る)。
 
+### 6. Node 24(Windows)の `fs.rmSync` は非ASCIIファイル名でネイティブクラッシュ
+日本語・空白入りファイル名に `fs.rmSync` を使うと **STATUS_STACK_BUFFER_OVERRUN
+(exit 0xC0000409)で無言クラッシュ**する(try/catchでは捕捉不可能)。
+`fs.unlinkSync` は同じファイルでも正常動作するため、削除は必ずunlinkSyncを使う。
+症状: `npm run dev` がpredevのsyncで沈黙のまま失敗し「サイトが立ち上がらない」。
+素材のファイル名は docs/06 の規則(小文字英数字とハイフンのみ)を厳守。
+`assets:validate` が規則違反を警告する。
+
 ## アーキテクチャの約束(docs/20)
 
 - ホーム構成は `data/home-sections.json` のセクションレジストリ。ハードコード禁止

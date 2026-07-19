@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
 import { routing } from '@/i18n/routing';
 
-// 本番は NEXT_PUBLIC_SITE_URL を設定する。
-// 未設定時、Vercelのプレビュー等では VERCEL_URL を暫定利用し、最後にlocalhostへ。
+// 本番は NEXT_PUBLIC_SITE_URL を設定する(最優先)。
+// 未設定時はVercelの本番ドメイン(VERCEL_PROJECT_PRODUCTION_URL)へフォールバック。
+// VERCEL_URLはデプロイ固有URLでOG画像がクローラーから取得できない場合があるため最後。
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : '') ||
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '') ||
   'http://localhost:3000'
 ).replace(/\/$/, '');
