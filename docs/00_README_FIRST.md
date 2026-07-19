@@ -50,6 +50,7 @@
 - `19_SIGNATURE_EXPERIENCE.md`: 独自演出(シグネチャー体験)の詳細仕様
 - `20_EXTENSIBILITY_CONTENT_PIPELINE.md`: 拡張性・コンテンツ追加パイプライン
 - `21_ASSET_AUDIT_STATUS.md`: 素材の現状監査と不足リスト
+- `22_MODEL_ADDITION_GUIDE.md`: モデル追加手順書(素材の準備・配置・データ追加)
 
 ## 想定ディレクトリ
 
