@@ -74,21 +74,17 @@ export function HeroSection({ desktop, mobile, alt }: Props) {
   return (
     <section
       ref={rootRef}
-      className="relative flex min-h-[100svh] flex-col overflow-hidden md:block md:items-end"
+      className="relative flex min-h-[100svh] items-end overflow-hidden"
       data-section="hero"
     >
-      {/* 動画レイヤー
-          モバイル: 上部の専用ゾーン(縦動画をしっかり見せる/テキストと重ねない)
-          デスクトップ: 全面背景 */}
-      <div
-        className="relative h-[50svh] w-full shrink-0 md:absolute md:inset-0 md:h-full"
-        aria-hidden="true"
-      >
+      {/* 全画面背景動画(デスクトップ・モバイル共通)。
+          モバイルは縦動画。モデルを上寄せに配置し、顔が上部に来て文字と被らないようにする */}
+      <div className="absolute inset-0" aria-hidden="true">
         {media ? (
           <video
             key={media.src}
             ref={videoRef}
-            className="h-full w-full object-cover object-[50%_28%] md:object-center"
+            className="h-full w-full object-cover object-[50%_18%] md:object-center"
             autoPlay
             muted
             loop
@@ -102,17 +98,16 @@ export function HeroSection({ desktop, mobile, alt }: Props) {
         ) : (
           <div className="h-full w-full bg-elevated" />
         )}
-        {/* デスクトップ: 可読性のためのシネマティックグラデーション */}
-        <div className="absolute inset-0 hidden bg-gradient-to-t from-bg via-bg/30 to-bg/40 md:block" />
-        <div className="absolute inset-x-0 bottom-0 hidden h-1/2 bg-gradient-to-t from-bg to-transparent md:block" />
-        {/* モバイル: 動画下端を黒へ溶かして下のテキストブロックへ自然に繋ぐ */}
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-bg to-transparent md:hidden" />
+        {/* 透過グラデーション: モデルは透けて見え、下部の文字は読める。
+            上部(モデルの顔)は透明に近く、下部(文字)へ向けて黒を強める */}
+        <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/20 to-bg/25 md:via-bg/30 md:to-bg/40" />
+        {/* 下部の可読性scrim: モバイルは高め(2/3)かつ中間も少し暗くして文字を読ませつつ、
+            モデルの腰あたりは透けて見える程度に留める。デスクトップは従来どおり */}
+        <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-bg via-bg/55 to-transparent md:h-1/2 md:via-transparent" />
       </div>
 
-      {/* DOMコンテンツ
-          モバイル: 動画の下(黒地)に配置しテキストを重ねない
-          デスクトップ: 動画に重ねて左下に配置 */}
-      <div className="relative z-10 flex flex-1 flex-col justify-center px-6 pt-3 pb-8 md:absolute md:inset-0 md:mx-auto md:h-full md:max-w-6xl md:justify-end md:pt-40 md:pb-24">
+      {/* DOMコンテンツ(下部に配置。デスクトップ・モバイル共通で動画に重ねる) */}
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-40 pb-20 md:pb-24">
         <p className="hero-fade text-[0.6rem] tracking-[0.35em] text-gold uppercase opacity-0 md:text-[0.65rem]">
           {tCommon('aiModel')} × {tCommon('realModel')}
         </p>
@@ -137,7 +132,7 @@ export function HeroSection({ desktop, mobile, alt }: Props) {
         </div>
       </div>
 
-      {/* スクロールヒント(デスクトップのみ。モバイルは縦積みで重なるため非表示) */}
+      {/* スクロールヒント(デスクトップのみ) */}
       <div className="hero-fade absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 opacity-0 md:block">
         <div className="flex flex-col items-center gap-2">
           <span className="text-[0.55rem] tracking-[0.3em] text-soft uppercase">

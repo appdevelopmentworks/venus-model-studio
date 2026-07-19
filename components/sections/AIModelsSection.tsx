@@ -12,6 +12,7 @@ import { useGSAP } from '@gsap/react';
 import { gsap, ScrollTrigger } from '@/lib/gsap';
 import { threeConfig } from '@/config/three';
 import { useQuality } from '@/components/providers/QualityProvider';
+import { AutoPlayVideo } from '@/components/media/AutoPlayVideo';
 import type { OrbitModelItem, OrbitState } from './orbit/OrbitCanvas';
 
 const OrbitCanvas = dynamic(() => import('./orbit/OrbitCanvas'), { ssr: false });
@@ -103,14 +104,25 @@ export function AIModelsSection({ models }: { models: AiModelCard[] }) {
               className="group relative w-[70vw] max-w-[300px] shrink-0 snap-center overflow-hidden"
             >
               <div className="relative aspect-[3/5] overflow-hidden bg-panel">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={m.posterUrl}
-                  alt={m.name}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  style={{ objectPosition: `${(m.focalX ?? 0.5) * 100}% 50%` }}
-                  loading="lazy"
-                />
+                {m.videoUrl ? (
+                  /* モバイルでも動画を再生(画面内カードのみ・同時1本) */
+                  <AutoPlayVideo
+                    src={m.videoUrl}
+                    poster={m.posterUrl}
+                    alt={m.name}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    style={{ objectPosition: `${(m.focalX ?? 0.5) * 100}% 50%` }}
+                  />
+                ) : (
+                  /* eslint-disable-next-line @next/next/no-img-element */
+                  <img
+                    src={m.posterUrl}
+                    alt={m.name}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    style={{ objectPosition: `${(m.focalX ?? 0.5) * 100}% 50%` }}
+                    loading="lazy"
+                  />
+                )}
               </div>
               <div className="mt-3 flex items-center justify-between">
                 <span className="font-display text-xl text-ivory">{m.name}</span>

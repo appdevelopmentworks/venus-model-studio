@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, type CSSProperties } from 'react';
 import { prefersReducedMotion } from '@/lib/performance';
 
 /** 同時再生1本ルールのためのシングルトン管理 */
@@ -24,6 +24,7 @@ type Props = {
   poster: string;
   alt: string;
   className?: string;
+  style?: CSSProperties;
 };
 
 /**
@@ -31,7 +32,7 @@ type Props = {
  * - preload=none、画面外でpause、同時再生は常に1本
  * - reduced-motion: ポスター画像のみ
  */
-export function AutoPlayVideo({ src, poster, alt, className }: Props) {
+export function AutoPlayVideo({ src, poster, alt, className, style }: Props) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const reduced = typeof window !== 'undefined' && prefersReducedMotion();
 
@@ -58,8 +59,10 @@ export function AutoPlayVideo({ src, poster, alt, className }: Props) {
   }, [src, reduced]);
 
   if (reduced) {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img src={poster} alt={alt} className={className} loading="lazy" />;
+    return (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src={poster} alt={alt} className={className} style={style} loading="lazy" />
+    );
   }
 
   return (
@@ -72,6 +75,7 @@ export function AutoPlayVideo({ src, poster, alt, className }: Props) {
       poster={poster}
       aria-label={alt}
       className={className}
+      style={style}
     />
   );
 }
