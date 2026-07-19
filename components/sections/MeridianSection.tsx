@@ -161,13 +161,14 @@ export function MeridianSection({ realUrl, digitalUrl, realAlt, digitalAlt }: Pr
         </h2>
       </div>
 
-      {/* ステージ: 元素材(16:9)を切り抜かず全体を表示する。
-          高さが100svhを超えないよう幅側を制限し、常に正確な16:9を維持 */}
+      {/* ステージ: 元素材(3:2)を切り抜かず全体を表示する。
+          素材と同じ3:2にすることで頭〜足元まで全身が収まる。
+          高さが90svhを超えないよう幅側を制限する */}
       <div
         ref={stageRef}
         data-cursor="drag"
-        className="relative mx-auto mt-10 aspect-video cursor-ew-resize touch-pan-y select-none overflow-hidden bg-panel"
-        style={{ width: 'min(100%, calc(100svh * 16 / 9))' }}
+        className="relative mx-auto mt-10 aspect-[3/2] cursor-ew-resize touch-pan-y select-none overflow-hidden bg-panel"
+        style={{ width: 'min(100%, calc(90svh * 3 / 2))' }}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}

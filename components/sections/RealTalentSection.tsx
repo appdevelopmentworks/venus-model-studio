@@ -45,8 +45,6 @@ export function RealTalentSection({ items }: { items: WallItem[] }) {
 
   if (items.length === 0) return null;
 
-  const [main, ...rest] = items;
-
   return (
     <section
       ref={sectionRef}
@@ -67,34 +65,14 @@ export function RealTalentSection({ items }: { items: WallItem[] }) {
         </h2>
         <p className="mt-4 max-w-md text-sm leading-relaxed text-soft">{t('body')}</p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {/* メイン(現場) */}
-          <figure className="group relative overflow-hidden md:col-span-2">
-            <div
-              data-cursor="view"
-              className="aspect-video overflow-hidden bg-panel"
-            >
-              <AutoPlayVideo
-                src={main.src}
-                poster={main.poster}
-                alt={main.alt}
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-              />
-            </div>
-            <figcaption className="mt-3 flex items-center justify-between">
-              <span className="text-[0.65rem] tracking-[0.2em] text-soft uppercase">
-                {main.caption}
-              </span>
-              <span className="border border-ivory/40 px-2 py-0.5 text-[0.55rem] tracking-[0.2em] text-ivory">
-                {tCommon('realModel')}
-              </span>
-            </figcaption>
-          </figure>
-
-          {rest.map((item, i) => (
-            <figure key={i} className="group relative flex flex-col justify-end overflow-hidden">
-              {/* 素材は16:9横長。縦クロップせず全体を見せる(下端をメインと揃える) */}
-              <div className="aspect-video overflow-hidden bg-panel">
+        {/* 全タイルを等幅16:9で揃える(素材は横長。縦クロップしない) */}
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          {items.map((item, i) => (
+            <figure key={i} className="group relative overflow-hidden">
+              <div
+                data-cursor="view"
+                className="aspect-video overflow-hidden bg-panel"
+              >
                 <AutoPlayVideo
                   src={item.src}
                   poster={item.poster}
