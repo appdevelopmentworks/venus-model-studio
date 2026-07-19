@@ -225,6 +225,16 @@ body {
   margin-top: -3px;
 }
 
+/* 流れ星のようなスモーク残像(全画面Canvas。dot/ringの下に敷く) */
+.cursor-trail {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 89;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
 .cursor-dot {
   width: 6px;
   height: 6px;
